@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Redirect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    // Redirect mobile users
+    if (/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+      window.location.href = "https://your-mobile-landing-page.com";
+    }
+  </script>
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    video {
+      width: 100%;
+      max-width: 480px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <video autoplay controls muted playsinline>
+    <source src="https://video.twimg.com/amplify_video/1944094326646317056/vid/avc1/320x320/FAnCvOlk9egtf20J.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</body>
+</html>
